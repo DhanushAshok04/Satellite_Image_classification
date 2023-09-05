@@ -9,12 +9,7 @@ st.title("Images")
 st.write("Predict the Satellite Image.")
 
 model = load_model("Model.h5")
-labels = {
-    0:'Cloudy',
-    1: 'Desert', 
-    2:'Green_Area', 
-    3:'Water'
-}
+labels=['Cloudy', 'Desert', 'Green_Area', 'Water']
 uploaded_file = st.file_uploader(
     "Upload an image taken by Satellite:", type="jpg"
 )
