@@ -20,9 +20,8 @@ if uploaded_file is not None:
     image1=classi=np.array(image1)/255.
     result=model.predict(image1[np.newaxis,...])
     
-    label=labels[np.argmax(predictions)]
-    print(predictions)
-    label
+    label=labels[np.argmax(result)]
+  
 
 st.write("### Prediction Result")
 if st.button("Predict"):
